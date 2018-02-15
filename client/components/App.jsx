@@ -8,15 +8,16 @@ import WordForm from './WordForm'
 
 const App = (props) => (
   <div className='app-container'>
-    <House />
+    {!props.showHouse && <WordForm />}
+    {props.showHouse && <House />}
     {props.showComponent === 'window' && <Window />}
     {props.showComponent === 'door' && <Door />}
-    <WordForm />
   </div>
 )
 
 function mapStateToProps (state) {
   return {
+    showHouse: state.showHouse,
     showComponent: state.showComponent
   }
 }

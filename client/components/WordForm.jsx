@@ -27,12 +27,13 @@ class WordForm extends React.Component {
   }
 
   clickHandler () {
-   this.props.dispatch(storyWords(this.state))
+    this.props.dispatch(storyWords(this.state))
   }
 
   render () {
     return (
       <div>
+        <h1>Please enter some words</h1>
         <form>
           <label>Names:
             <input onChange={this.changeHandler} name='name1' />

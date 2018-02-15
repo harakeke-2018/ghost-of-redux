@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 class Window extends React.Component {
   constructor (props) {
@@ -11,12 +12,20 @@ class Window extends React.Component {
     return (
       <div>
         <h1>You chose the window</h1>
-        <p>You enter the house through the window, but there's nothing there so you just go home.</p>
-        <p>Nice one!</p>
+        <p><strong>{this.props.friend}</strong> would have chosen the window. But as soon as you open it, the window SMASHES and reveals a <strong>{this.props.adjective} {this.props.animal}</strong> ghost!</p>
+        <p>It is super scary and you run away...</p>
         <a href='/'>Try again!</a>
       </div>
     )
   }
 }
 
-export default Window
+function mapStateToProps (state) {
+  return {
+    friend: state.storyWordReducer.name2,
+    adjective: state.storyWordReducer.adjective1,
+    animal: state.storyWordReducer.animal2
+  }
+}
+
+export default connect(mapStateToProps)(Window)
