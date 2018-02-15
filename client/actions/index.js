@@ -10,6 +10,14 @@ export const addWord = (word) => {
   }
 }
 
+export const showComponent = (component) => {
+  console.log(component)
+  return {
+    type: 'SHOW_COMPONENT',
+    id: component
+  }
+}
+
 export const storyWords = (words) => {
   console.log(words)
   return {
