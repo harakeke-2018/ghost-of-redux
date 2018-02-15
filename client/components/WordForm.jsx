@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+import {storyWords} from '../actions/index'
+
 class WordForm extends React.Component {
   constructor (props) {
     super(props)
@@ -15,7 +17,7 @@ class WordForm extends React.Component {
       smell2: ''
     }
     this.changeHandler = this.changeHandler.bind(this)
-    // this.clickHandler = this.clickHandler.bind(this)
+    this.clickHandler = this.clickHandler.bind(this)
   }
 
   changeHandler (evt) {
@@ -25,7 +27,7 @@ class WordForm extends React.Component {
   }
 
   clickHandler () {
-    //dispatch are action
+   this.props.dispatch(storyWords(this.state))
   }
 
   render () {
@@ -54,5 +56,6 @@ class WordForm extends React.Component {
     )
   }
 }
+
 
 export default connect()(WordForm)
