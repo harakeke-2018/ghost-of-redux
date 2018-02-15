@@ -1,4 +1,4 @@
-import {STORY_WORDS} from '../actions/index'
+// import STORY_WORDS from '../actions'
 
 const initialState = {}
 

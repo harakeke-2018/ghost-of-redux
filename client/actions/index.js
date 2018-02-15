@@ -1,6 +1,6 @@
 let nextWordId = 0
 
-const STORY_WORDS = 'STORY_WORDS'
+export const STORY_WORDS = 'STORY_WORDS'
 
 export const addWord = (word) => {
   return {
