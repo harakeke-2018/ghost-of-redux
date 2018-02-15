@@ -9,3 +9,8 @@
   font-family: 'Nosifer', cursive;
   color: red
 }
+
+body {
+  background-image: url("background.jpg");
+  color: white;
+}
