@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import words from './words'
+import storyWordReducer from './storyWordReducer'
 
 export default combineReducers({
-  words
+  storyWordReducer
 })
