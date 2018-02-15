@@ -34,29 +34,47 @@ class WordForm extends React.Component {
     return (
       <div>
         <h1>Please enter some words</h1>
-        <form>
-          <label>Names:
-            <input onChange={this.changeHandler} name='name1' />
-            <input onChange={this.changeHandler} name='name2' />
-          </label>
-          <label>Animals:
-            <input onChange={this.changeHandler} name='animal1' />
-            <input onChange={this.changeHandler} name='animal2' />
-          </label>
-          <label>Adjectives:
-            <input onChange={this.changeHandler} name='adjective1' />
-            <input onChange={this.changeHandler} name='adjective2' />
-          </label>
-          <label>Smells:
-            <input onChange={this.changeHandler} name='smell1' />
-            <input onChange={this.changeHandler} name='smell2' />
-          </label>
-          <button type='button' onClick={this.clickHandler}>Begin Adventure</button>
+        <form className='container'>
+          <div className='row'>
+            <label>Names:
+            <div className='row'>
+              <input onChange={this.changeHandler} name='name1' />
+              <input onChange={this.changeHandler} name='name2' />
+            </div>
+            </label>
+          </div>
+          <div className='row'>
+            <label>Animals:
+            <div className=''>
+              <input onChange={this.changeHandler} name='animal1' />
+              <input onChange={this.changeHandler} name='animal2' />
+            </div>
+            </label>
+          </div>
+          <div className='row'>
+            <label>Adjectives:
+            <div className='row'>
+              <input onChange={this.changeHandler} name='adjective1' />
+              <input onChange={this.changeHandler} name='adjective2' />
+            </div>
+            </label>
+          </div>
+          <div className='row'>
+            <label>Smells:
+            <div className='row'>
+              <input onChange={this.changeHandler} name='smell1' />
+              <input onChange={this.changeHandler} name='smell2' />
+            </div>
+            </label>
+          </div>
+          <div className='row'>
+            <button type='button' onClick={this.clickHandler}>Begin Adventure</button>
+          </div>
+
         </form>
       </div>
     )
   }
 }
-
 
 export default connect()(WordForm)
