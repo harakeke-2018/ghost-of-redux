@@ -18,11 +18,11 @@ class Door extends React.Component {
     return (
       <div>
         <h1>You chose the door</h1>
-        <p> You thought of your friend {this.props.friend}, who would open the door.
+        <p> You thought of your friend <strong>{this.props.friend}</strong>, who would open the door.
           <br />
-        The {this.props.smell} smell was getting worse! Behind the door was a {this.props.animal}.
+        The <strong>{this.props.smell}</strong> smell was getting worse! Behind the door was a <strong>{this.props.animal}</strong>.
           <br />
-        The {this.props.animal} attacks you and you die a slow painful death.</p>
+        The <strong>{this.props.animal}</strong> attacks you and you die a slow painful death.</p>
 
       <a href='/'>Try again!</a>
         {/* <button id='window' onClick={this.handleClick}>Show </button> */}
