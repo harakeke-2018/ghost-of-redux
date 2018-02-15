@@ -1,13 +1,22 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-import Words from './Words'
-import AddWord from './AddWord'
+import House from './House'
+import Window from './Window'
+import Door from './Door'
 
-const App = () => (
+const App = (props) => (
   <div className='app-container'>
-    <Words />
-    <AddWord />
+    <House />
+    {props.showComponent === 'window' && <Window />}
+    {props.showComponent === 'door' && <Door />}
   </div>
 )
 
-export default App
+function mapStateToProps (state) {
+  return {
+    showComponent: state.showComponent
+  }
+}
+
+export default connect(mapStateToProps)(App)

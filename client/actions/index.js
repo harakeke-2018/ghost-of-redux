@@ -7,3 +7,11 @@ export const addWord = (word) => {
     word
   }
 }
+
+export const showComponent = (component) => {
+  console.log(component)
+  return {
+    type: 'SHOW_COMPONENT',
+    id: component
+  }
+}
