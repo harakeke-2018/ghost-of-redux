@@ -1,5 +1,3 @@
-let nextWordId = 0
-
 export const STORY_WORDS = 'STORY_WORDS'
 
 export const addWord = (word) => {
