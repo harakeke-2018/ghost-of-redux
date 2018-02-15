@@ -6,12 +6,18 @@ class Door extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      showWindow: false
+      showResults: false
     }
-  //   this.handleClick = this.handleClick.bind(this)
+    this.handleClickDoor = this.handleClickDoor.bind(this)
   // }
   // handleClick (e) {
   //   this.props.dispatch(showComponent(e.target.id))
+  }
+
+  handleClickDoor () {
+    this.setState({
+      showResults: true
+    })
   }
 
   render () {
@@ -20,11 +26,18 @@ class Door extends React.Component {
         <h1>You chose the door</h1>
         <p> You thought of your friend <strong>{this.props.friend}</strong>, who would open the door.
           <br />
-        The <strong>{this.props.smell}</strong> smell was getting worse! Behind the door was a <strong>{this.props.animal}</strong>.
-          <br />
-        The <strong>{this.props.animal}</strong> attacks you and you die a slow painful death.</p>
+        The <strong>{this.props.smell}</strong> smell was getting worse! </p>
 
-      <a href='/'>Try again!</a>
+        <button onClick={this.handleClickDoor}>Open the door</button>
+
+        {this.state.showResults &&
+        <div>
+          <p>Behind the door was a <strong>{this.props.animal}</strong>.
+            <br />
+        The <strong>{this.props.animal}</strong> attacks you and you die a slow painful death.</p>
+          <a href='/'>Try again!</a>
+        </div>
+        }
         {/* <button id='window' onClick={this.handleClick}>Show </button> */}
       </div>
     )
@@ -33,10 +46,9 @@ class Door extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    friend: 'Belma',
-    smell: 'poo',
-    animal: 'kitten',
-    name: state.name
+    friend: state.storyWordReducer.name2,
+    smell: state.storyWordReducer.smell1,
+    animal: state.storyWordReducer.animal1
   }
 }
 export default connect(mapStateToProps)(Door)

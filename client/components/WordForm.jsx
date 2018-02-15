@@ -33,6 +33,7 @@ class WordForm extends React.Component {
   render () {
     return (
       <div>
+        <h1>Please enter some words</h1>
         <form className='container'>
           <div className='row'>
             <label>Names:
@@ -69,6 +70,7 @@ class WordForm extends React.Component {
           <div className='row'>
             <button type='button' onClick={this.clickHandler}>Begin Adventure</button>
           </div>
+
         </form>
       </div>
     )
