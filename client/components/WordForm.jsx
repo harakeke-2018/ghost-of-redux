@@ -35,38 +35,30 @@ class WordForm extends React.Component {
       <div>
         <h1>Please enter some words</h1>
         <form className='container'>
+          <label className= 'row'>Names: </label>
           <div className='row'>
-            <label>Names:
-            <div className='row'>
-              <input onChange={this.changeHandler} name='name1' />
-              <input onChange={this.changeHandler} name='name2' />
-            </div>
-            </label>
+            <input onChange={this.changeHandler} name='name1' />
+            <input onChange={this.changeHandler} name='name2' />
           </div>
+
+          <label className='row'>Animals:</label>
           <div className='row'>
-            <label>Animals:
-            <div className=''>
-              <input onChange={this.changeHandler} name='animal1' />
-              <input onChange={this.changeHandler} name='animal2' />
-            </div>
-            </label>
+            <input onChange={this.changeHandler} name='animal1' />
+            <input onChange={this.changeHandler} name='animal2' />
           </div>
+
+          <label className='row'>Adjectives:</label>
           <div className='row'>
-            <label>Adjectives:
-            <div className='row'>
-              <input onChange={this.changeHandler} name='adjective1' />
-              <input onChange={this.changeHandler} name='adjective2' />
-            </div>
-            </label>
+            <input onChange={this.changeHandler} name='adjective1' />
+            <input onChange={this.changeHandler} name='adjective2' />
           </div>
+
+          <label className='row'>Smells:</label>
           <div className='row'>
-            <label>Smells:
-            <div className='row'>
-              <input onChange={this.changeHandler} name='smell1' />
-              <input onChange={this.changeHandler} name='smell2' />
-            </div>
-            </label>
+            <input onChange={this.changeHandler} name='smell1' />
+            <input onChange={this.changeHandler} name='smell2' />
           </div>
+
           <div className='row'>
             <button type='button' onClick={this.clickHandler}>Begin Adventure</button>
           </div>

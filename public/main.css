@@ -5,19 +5,20 @@ justify-content: center
 }
 
 input {
-  margin: 0 1rem;
+  margin: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+label {
+  font-size: 2rem;
 }
 
 button {
   padding: 1rem;
-  margin: 1rem 0 0 0
+  margin: 1rem 0 0 0;
+  border-radius: 1rem;
+  font-size: 1rem
 }
-
-/* label {
-  margin: 0 0 0 5rem
-} */
-
-
 
 .title {
   font-family: 'Nosifer', cursive;
@@ -29,3 +30,4 @@ body {
   color: white;
   background-size: cover;
 }
+
