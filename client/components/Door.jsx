@@ -34,7 +34,7 @@ class Door extends React.Component {
         <div>
           <p>Behind the door was a <strong>{this.props.animal}</strong>.
             <br />
-        The <strong>{this.props.animal}</strong> attacks you and you die a slow painful death.</p>
+        The <strong>{this.props.animal}</strong> attacks you and you have a {this.props.percent}% chance of dieing a slow painful death.</p>
           <a href='/'>Try again!</a>
         </div>
         }
@@ -48,7 +48,8 @@ function mapStateToProps (state) {
   return {
     friend: state.storyWordReducer.name2,
     smell: state.storyWordReducer.smell1,
-    animal: state.storyWordReducer.animal1
+    animal: state.storyWordReducer.animal1,
+    percent: state.survival
   }
 }
 export default connect(mapStateToProps)(Door)
