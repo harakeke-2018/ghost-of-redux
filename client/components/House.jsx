@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {showComponent} from '../actions'
+import { showComponent } from '../actions'
 
 class House extends React.Component {
   constructor (props) {
@@ -17,11 +17,11 @@ class House extends React.Component {
   render () {
     return (
       <div className='container'>
-
-        <h1 className='title row'>Welcome to the haunted house of Redux</h1>
-
+        <h1 className='title row'>Late one stormy night...</h1>
         <div className='row'>
-          <p> Welcome <strong>{this.props.name}</strong>. Do you want to go through the window or the door? </p>
+          <p><strong>{this.props.words.name1}</strong> and <strong>{this.props.words.name2}</strong> are walking along a dark forest path.
+            <br /> They come across a {this.props.words.adjective1} house and they must decide...
+            <br />Should they enter through the door, or open the window? </p>
         </div>
         <div className='row'>
           <button className='story-button' id='window' onClick={this.handleClick}>Window</button>
@@ -34,7 +34,7 @@ class House extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    name: state.storyWordReducer.name1
+    words: state.storyWordReducer
   }
 }
 export default connect(mapStateToProps)(House)

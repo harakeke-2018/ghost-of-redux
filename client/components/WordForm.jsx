@@ -33,7 +33,7 @@ class WordForm extends React.Component {
   render () {
     return (
       <div>
-        <h1>Please enter some words</h1>
+        <h1 className='title row'>Enter at your own risk...</h1>
         <form>
           <label className= 'row'>Names: </label>
           <div className='row'>
@@ -51,6 +51,12 @@ class WordForm extends React.Component {
           <div className='row'>
             <input onChange={this.changeHandler} name='adjective1' />
             <input onChange={this.changeHandler} name='adjective2' />
+          </div>
+
+          <label className='row'>Objects:</label>
+          <div className='row'>
+            <input onChange={this.changeHandler} name='object1' />
+            <input onChange={this.changeHandler} name='object2' />
           </div>
 
           <label className='row'>Smells:</label>
