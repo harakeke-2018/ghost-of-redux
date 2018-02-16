@@ -17,8 +17,10 @@ class House extends React.Component {
   render () {
     return (
       <div>
-        <h1 className='title'>Welcome to the haunted house of Redux</h1>
-        <p> Welcome <strong>{this.props.name}</strong>. Do you want to go through the window or the door? </p>
+        <h1 className='title'>Late one stormy night...</h1>
+        <p><strong>{this.props.words.name1}</strong> and <strong>{this.props.words.name2}</strong> are walking along a dark forest path. 
+        <br /> They come across a {this.props.words.adjective1} house and they must decide...
+        <br />Should they enter through the door, or open the window? </p>
         <button id='window' onClick={this.handleClick}>Window</button>
         <button id='door' onClick={this.handleClick}>Door</button>
       </div>
@@ -28,7 +30,7 @@ class House extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    name: state.storyWordReducer.name1
+    words: state.storyWordReducer
   }
 }
 export default connect(mapStateToProps)(House)

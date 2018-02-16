@@ -53,6 +53,12 @@ class WordForm extends React.Component {
             <input onChange={this.changeHandler} name='adjective2' />
           </div>
 
+          <label className='row'>Objects:</label>
+          <div className='row'>
+            <input onChange={this.changeHandler} name='object1' />
+            <input onChange={this.changeHandler} name='object2' />
+          </div>
+
           <label className='row'>Smells:</label>
           <div className='row'>
             <input onChange={this.changeHandler} name='smell1' />
