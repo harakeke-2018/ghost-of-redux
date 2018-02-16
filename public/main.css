@@ -3,7 +3,14 @@ display: flex;
 flex-wrap: nowrap;
 justify-content: center
 }
-
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5%;
+}
 input {
   margin: 0.5rem 1rem;
   font-size: 1.2rem;
@@ -20,14 +27,20 @@ button {
   font-size: 1rem
 }
 
+.story-button {
+  margin: 1rem;
+}
+
 .title {
   font-family: 'Nosifer', cursive;
-  color: red
+  color: red;
+  margin: 1rem 0 0 3rem
 }
 
 body {
   background-image: url("background.jpg");
   color: white;
   background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 

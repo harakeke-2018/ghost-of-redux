@@ -16,11 +16,17 @@ class House extends React.Component {
 
   render () {
     return (
-      <div>
-        <h1 className='title'>Welcome to the haunted house of Redux</h1>
-        <p> Welcome <strong>{this.props.name}</strong>. Do you want to go through the window or the door? </p>
-        <button id='window' onClick={this.handleClick}>Window</button>
-        <button id='door' onClick={this.handleClick}>Door</button>
+      <div className='container'>
+
+        <h1 className='title row'>Welcome to the haunted house of Redux</h1>
+
+        <div className='row'>
+          <p> Welcome <strong>{this.props.name}</strong>. Do you want to go through the window or the door? </p>
+        </div>
+        <div className='row'>
+          <button className='story-button' id='window' onClick={this.handleClick}>Window</button>
+          <button className='story-button' id='door' onClick={this.handleClick}>Door</button>
+        </div>
       </div>
     )
   }
