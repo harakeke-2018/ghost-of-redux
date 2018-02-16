@@ -33,7 +33,7 @@ class WordForm extends React.Component {
   render () {
     return (
       <div>
-        <h1>Please enter some words</h1>
+        <h1 className='title row'>Enter at your own risk...</h1>
         <form>
           <label className= 'row'>Names: </label>
           <div className='row'>
