@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {storyWords} from '../actions/index'
+import {beginStory} from '../actions/index'
 
 class WordForm extends React.Component {
   constructor (props) {
@@ -27,7 +27,7 @@ class WordForm extends React.Component {
   }
 
   clickHandler () {
-    this.props.dispatch(storyWords(this.state))
+    this.props.dispatch(beginStory(this.state))
   }
 
   render () {
