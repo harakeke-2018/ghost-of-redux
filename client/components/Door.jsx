@@ -37,7 +37,7 @@ class Door extends React.Component {
             <div className='row'>
               <p>Behind the door is a <strong>{this.props.words.animal2}</strong>.
                 <br />
-                The <strong>{this.props.words.animal2}</strong> attacks you and you die a slow painful death. Sorry!</p>
+                The <strong>{this.props.words.animal2}</strong> attacks you and you have a {this.props.percent}% chance of dieing a slow painful death. Sorry!</p>
             </div>
             <div className='row'>
               <a href='/'>Try again!</a>
@@ -52,7 +52,8 @@ class Door extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    words: state.storyWordReducer
+    words: state.storyWordReducer,
+    percent: state.survival
   }
 }
 export default connect(mapStateToProps)(Door)
