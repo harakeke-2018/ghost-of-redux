@@ -34,7 +34,7 @@ class WordForm extends React.Component {
     return (
       <div>
         <h1>Please enter some words</h1>
-        <form className='container'>
+        <form>
           <label className= 'row'>Names: </label>
           <div className='row'>
             <input onChange={this.changeHandler} name='name1' />
